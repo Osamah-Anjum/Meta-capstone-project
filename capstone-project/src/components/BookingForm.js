@@ -11,9 +11,7 @@ const BookingForm = (props) => {
   const [occasion, setOccasion] = useState("");
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
-
     props.SubmitForm(e);
 
   }
@@ -31,7 +29,7 @@ const BookingForm = (props) => {
 
       <section>
 
-        <form>
+        <form onSubmit={handleSubmit}>
 
           <fieldset>
 
