@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Booking from './BookingForm';
+import BookingForm from './BookingForm';
 
 const Booking = (props) => {
 
   return (
 
-    <BookingForm available Times={props.availableTimes} dispatch={props.dispatch} SubmitForm={props.SubmitForm} />
+    <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} SubmitForm={props.SubmitForm} />
 
   );
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const BookingForm = () => {
+const BookingForm = (props) => {
 
   const [date, setDate] = useState("");
 
@@ -66,9 +66,7 @@ const BookingForm = () => {
 
               <label html For='book-guests'>Number of Guests:</label>
 
-              <input id='book-guests' min='1' value={guests} onChange={(e) => setGuests(e.target.
-
-                value)} />
+              <input id='book-guests' min='1' value={guests} onChange={(e) => setGuests(e.target.value)} />
 
             </div>
 
