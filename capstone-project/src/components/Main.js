@@ -58,13 +58,14 @@ const Main = () => {
   const [state, dispatch] = useReducer(updateTimes, initialState);
 
   function updateTimes(state, date) {
-
     return { availableTimes: fetchAPI(new Date()) }
   }
 
   const navigate = useNavigate();
   function submitForm(formData) {
-    navigate("/confirmed");
+    if (submitAPI(formData)) {
+      navigate("/confirmed");
+    }
   }
 
   return (
@@ -75,9 +76,7 @@ const Main = () => {
 
         <Route path='/' element={<Header />} />
 
-        <Route path='/booking' element={<Booking availableTimes={state} dispatch={dispatch} submitForm=
-
-          {submitForm} />} />
+        <Route path='/booking' element={<Booking availableTimes={state} dispatch={dispatch} submitForm={submitForm} />} />
 
         <Route path='/' element={<Header />} />
 
