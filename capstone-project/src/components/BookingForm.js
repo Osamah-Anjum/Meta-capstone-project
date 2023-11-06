@@ -13,7 +13,6 @@ const BookingForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.SubmitForm(e);
-
   }
 
   const handleChange = (e) => {
@@ -52,7 +51,7 @@ const BookingForm = (props) => {
 
                 {
 
-                  props.availableTimes.availableTimes.map(availableTimes => { return <option key={availableTimes}> {availableTimes}</option> })
+                  props.availableTimes.availableTimes.map(availableTimes => { return <option key={availableTimes}>{availableTimes}</option> })
 
                 }
 
@@ -72,9 +71,7 @@ const BookingForm = (props) => {
 
               <label htmlFor='book-occasion'>Occasion:</label>
 
-              <select id='book-occasion' key={occasion} value={occasion} onChange={e => setOccasion
-
-                (e.target.value)}>
+              <select id='book-occasion' key={occasion} value={occasion} onChange={e => setOccasion(e.target.value)}>
 
                 <option>Birthday</option>
 
